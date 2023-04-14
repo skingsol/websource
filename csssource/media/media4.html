@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 모든 요소의 크기는 border 포함 */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans";
+        background: #ecf0f1;
+      }
+      .wrapper {
+        width: 100%;
+        margin: 2rem auto;
+        max-width: 60rem;
+      }
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        order: 2;
+        width: 60%;
+        padding: 1.618rem;
+      }
+      .flexbg .sidebar {
+        width: 20%;
+        color: white;
+        padding: 1.618rem;
+      }
+      .flexbg .left {
+        order: 1;
+        background: #3498db;
+      }
+      .flexbg .right {
+        order: 3;
+        background: #34495e;
+      }
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          order: 1;
+          width: 100%;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quod
+          incidunt, iure temporibus ipsa minima voluptatibus fuga recusandae
+          quaerat quo autem nesciunt, sequi enim. Rem possimus ipsa, sed quo
+          unde delectus et voluptate porro at dolore eius aut, nobis, laudantium
+          praesentium accusamus? Ad, molestiae ratione! Necessitatibus rem
+          cupiditate alias ut?
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quod
+          incidunt, iure temporibus ipsa minima voluptatibus fuga recusandae
+          quaerat quo autem nesciunt, sequi enim. Rem possimus ipsa, sed quo
+          unde delectus et voluptate porro at dolore eius aut, nobis, laudantium
+          praesentium accusamus? Ad, molestiae ratione! Necessitatibus rem
+          cupiditate alias ut?
+        </p>
+      </main>
+      <aside class="sidebar left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga
+        aperiam nobis sit minus nulla similique nesciunt, culpa ratione ducimus
+        odit dolor sint modi, aspernatur aliquid accusantium quisquam molestiae
+        temporibus!
+      </aside>
+      <aside class="sidebar right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga
+        aperiam nobis sit minus nulla similique nesciunt, culpa ratione ducimus
+        odit dolor sint modi, aspernatur aliquid accusantium quisquam molestiae
+        temporibus!
+      </aside>
+    </div>
+  </body>
+</html>

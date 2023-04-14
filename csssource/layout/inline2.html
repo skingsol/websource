@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="inline2.css" />
+  </head>
+  <body>
+    <!-- block 요소를 옆으로 나열 
+        1) display : inline-block;
+            - 하단, 오른쪽 공백 생김
+            => 오른쪽공백 제거:  font-size: 0;
+            => 하단공백 제거:  vertical-align: top;
+            - text-align 속성 사용 가능(텍스트 정렬위치지정)
+            
+        2) float:left, right;
+            - 자식 요소들이 float 일 때 떠 있는 개념이 생기기 때문에
+              부모의 height 가 0 인 상태가 됨(화면에 표시가 안된다는 소리)
+            => 1번 overlow:hidden (부모가 높이가 없을때 자식의 높이를 강제로 잡아줌)
+               부모의 높이는 해결되지만, 다른 요소들이 따라온다면 해결이 다 안됨
+            => 2번 clear:both; 사용하기 
+               - clear:both  플루트 다음요소에서 해제하기
+               - clearfix::after 가상요소 사용하여 해제하기
+                 장점:
+                 inline-block 공백 문제가 없음
+                 left, right 방식이 자유로워짐
+        
+        3) grid
+
+
+    -->
+
+    <div class="grid clearfix">
+      <div class="grid-item a"></div>
+      <div class="grid-item b"></div>
+      <div class="grid-item c"></div>
+    </div>
+  </body>
+</html>
